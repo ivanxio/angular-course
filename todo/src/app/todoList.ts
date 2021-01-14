@@ -1,7 +1,11 @@
-import { from } from "rxjs";
-
+/*
+ * Dependency on the TodoItem.
+ */
 import { TodoItem } from "./todoItem";
 
+/**
+ * The TodoList data model.
+ */
 export class TodoList {
 
     /**
