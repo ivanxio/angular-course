@@ -1,6 +1,15 @@
+/**
+ * The todoItem data model.
+ */
 export class TodoItem {
 
+    /**
+     * The task name.
+     */
     task : string;
+    /**
+     * Indicates if the taks is completed.
+     */
     complete: boolean;
 
     /**
