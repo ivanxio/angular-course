@@ -34,4 +34,11 @@ export class AppComponent {
   public get itemCount() : number {
     return this.list.items.filter(item => !item.complete).length;
   }  
+
+  /**
+   * Method to get items.
+   */
+  public get items() : readonly TodoItem[] {
+    return this.list.items;
+  }
 }
