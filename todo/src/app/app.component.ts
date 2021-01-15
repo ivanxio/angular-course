@@ -29,16 +29,16 @@ export class AppComponent {
   }
 
   /**
-   * Getter to the complete items count.
+   * Getter to the total items count.
    */
   public get itemCount() : number {
-    return this.list.items.filter(item => !item.complete).length;
+    return this.items.length;
   }  
 
   /**
-   * Method to get items.
+   * Method to get the complete items.
    */
   public get items() : readonly TodoItem[] {
-    return this.list.items;
-  }
+    return this.list.items.filter(item => !item.complete);
+  }  
 }
