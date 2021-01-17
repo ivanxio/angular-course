@@ -41,4 +41,13 @@ export class AppComponent {
   public get items() : readonly TodoItem[] {
     return this.list.items.filter(item => !item.complete);
   }  
+
+  /**
+   * Method to add a new task.
+   */
+  public addItem(newItem) {
+    if(newItem != "") {
+      this.list.addItem(newItem);
+    }
+  }
 }
