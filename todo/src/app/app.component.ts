@@ -21,6 +21,8 @@ export class AppComponent {
     ]
   );
 
+  public showComplete: boolean = false;
+
   /**
    * Getter to the username.
    */
@@ -36,11 +38,11 @@ export class AppComponent {
   }  
 
   /**
-   * Method to get the complete items.
+   * Method to get the complete and incomplete items.
    */
-  public get items() : readonly TodoItem[] {
-    return this.list.items.filter(item => !item.complete);
-  }  
+  get items(): readonly TodoItem[] {
+    return this.list.items.filter(item => this.showComplete || !item.complete);
+  }
 
   /**
    * Method to add a new task.
